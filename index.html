@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our First Monthsary 💜</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#6b5fa6">
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <header class="site-header">
+    <button class="audio-toggle" aria-pressed="false" title="Play / Pause music">Play ♫</button>
+    <nav class="nav">
+      <a href="#story">Story</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#message">Message</a>
+      <a href="#timeline">Timeline</a>
+    </nav>
+    <div class="countdown" id="countdown">— days until our next monthsary 💜</div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="site-title shimmer">Our First Monthsary</h1>
+        <p class="hero-sub">A little page I made for you — soft, glowing and full of love.</p>
+        <a class="cta" href="#story">Begin the Story →</a>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="section story-section">
+      <h2 class="section-title">Our Story</h2>
+      <div class="story-card">
+        <div id="story-scene" class="story-scene fade-in" aria-live="polite"></div>
+        <div class="story-controls">
+          <button id="prev-scene" class="ghost">← Prev</button>
+          <button id="next-scene" class="primary">Next →</button>
+        </div>
+        <div class="story-progress" id="story-progress"></div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-grid" id="gallery-grid" aria-live="polite">
+        <!-- images injected by JS -->
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+      <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</button>
+      <img id="lightbox-img" alt="">
+      <button class="lightbox-next" id="lightbox-next" aria-label="Next">›</button>
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Message Section -->
+    <section id="message" class="section message-section">
+      <h2 class="section-title">A Love Letter</h2>
+      <div class="message-card">
+        <div id="typewriter" class="typewriter" aria-live="polite"></div>
+        <div class="message-actions">
+          <button id="replay-type" class="ghost">Replay</button>
+          <a class="download-btn" id="download-note" download="love-note.txt">Download Note</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section timeline-section">
+      <h2 class="section-title">Milestones</h2>
+      <div class="timeline-wrap" id="timeline-wrap" role="list">
+        <!-- timeline items injected by JS -->
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>Made with ♥ for you — happy monthsary.</p>
+      <small class="credits">Replace images/music with your own for a personal touch.</small>
+    </footer>
+  </main>
+
+  <!-- Floating hearts container -->
+  <div id="hearts"></div>
+
+  <!-- Music star control (floating) -->
+  <button id="music-star" class="music-star" aria-pressed="false" aria-label="Toggle music (click to unmute)" title="Toggle music">
+    <!-- simple star SVG -->
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 2.5l2.5 5.3 5.8.8-4.2 3.9 1 5.7L12 16.9 6.9 18.2l1-5.7L3.7 8.6l5.8-.8L12 2.5z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <!-- Background music (user can toggle/unmute) -->
+  <audio id="bg-music" loop preload="auto">
+    <!-- Replace with your preferred track (local or remote). -->
+    <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0fa0a6d8f0.mp3?filename=soft-piano-ambient-110329.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
